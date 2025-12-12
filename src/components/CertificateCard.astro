@@ -1,0 +1,11 @@
+---
+const { imgSrc, link } = Astro.props;
+---
+
+<a href={link} target="_blank">
+  <div class="tech-box position-relative">
+    <div class="placeholder-box">
+      <img src={imgSrc} alt="Certificate" />
+    </div>
+  </div>
+</a>
