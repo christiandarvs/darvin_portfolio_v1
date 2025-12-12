@@ -1,0 +1,16 @@
+---
+const { title, imgSrc, techIcons = [], link } = Astro.props;
+---
+
+<a href={link} target="_blank">
+  <div class="tech-box position-relative">
+    <div class="placeholder-box">
+      <img src={imgSrc} alt={title} />
+    </div>
+    <div class="overlay d-flex flex-wrap justify-content-center align-items-center">
+      {techIcons.map((icon: string | null | undefined) => (
+        <img src={icon} class="tech-icon" />
+      ))}
+    </div>
+  </div>
+</a>
