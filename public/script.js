@@ -1,30 +1,13 @@
-function loadBookData() {
-  fetch("https://tf-book-covers.s3.ap-southeast-2.amazonaws.com/book.json")
-    .then((response) => response.json())
-    .then((json) => {
-      const coverUrl = `${json.cover}?t=${Date.now()}`;
-      document.getElementById("cover").src = coverUrl;
-    })
-    .catch((error) => console.error("Error loading JSON:", error));
-}
-
-function disableScrollRestoration() {
-  if ("scrollRestoration" in history) {
-    history.scrollRestoration = "manual";
+document.addEventListener("DOMContentLoaded", () => {
+  const year = new Date().getFullYear();
+  const userId = "189003626";
+  const yearSpan = document.getElementById("current-year");
+  if (yearSpan) {
+    yearSpan.textContent = year;
   }
-}
 
-function resetScrollOnLoad() {
-  window.addEventListener("load", () => {
-    history.replaceState(null, null, window.location.pathname);
-    window.scrollTo(0, 0);
-  });
-}
-
-function init() {
-  disableScrollRestoration();
-  resetScrollOnLoad();
-  loadBookData();
-}
-
-init();
+  const linkTag = document.getElementById("goodreads-link");
+  if (linkTag) {
+    linkTag.href = `https://www.goodreads.com/user/year_in_books/${year}/${userId}`;
+  }
+});

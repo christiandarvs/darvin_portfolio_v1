@@ -38,6 +38,16 @@ const projects = [
       "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/p5js/p5js-original.svg",
     ],
   },
+  {
+    title: "SecurePin",
+    imgSrc: "assets/banners/secure-pin.png",
+    link: "",
+    techIcons: [
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-plain.svg",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flask/flask-original.svg",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-plain.svg",
+    ],
+  },
 
 
 ];
@@ -69,6 +79,8 @@ const certificates = [
     />
     <link rel="stylesheet" href="style.css" />
   <link rel="shortcut icon" href="favicon.svg" />
+  <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+          
 
   </head>
   <body>
@@ -91,17 +103,15 @@ const certificates = [
       <h1>About Me</h1>
       <div class="about-container">
         <div class="details">
-          <h2>Details</h2>
+          <!-- <h2>Details</h2> -->
           <ul>
             <li>BSc Computer Science (Senior Year)</li>
-            <li>Research Interests: Computer Vision, Theoretical CS, Robotics</li>
-            <li>Linux Enthusiast (Ubuntu)</li>
-            <li>Reader: Sci-Fi & Philosophy</li>
+            <li>Research Interests: Theoretical CS, Robotics</li>
+            <li>Linux Enthusiast (Ubuntu) <i class="devicon-ubuntu-plain colored"></i> </li>
+         <li><a id="goodreads-link" href="#" target="_blank" class="text-decoration-none text-reset">
+            View what I'm reading for <span id="current-year"></span> > 
+          <img src="assets/goodreads-logo.svg" alt="Goodreads" class="goodreads-icon"></a></li>
           </ul>
-        </div>
-        <div class="currently-reading">
-          <h2>Currently Reading</h2>
-          <img src="" id="cover" alt="Book Cover" class="reading-image" draggable="false" />
         </div>
       </div>
     </section>

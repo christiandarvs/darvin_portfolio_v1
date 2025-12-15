@@ -264,6 +264,21 @@ h1 {
   pointer-events: auto;
 }
 
+.goodreads-icon {
+  filter: invert(53%) sepia(12%) saturate(2264%) hue-rotate(106deg)
+    brightness(95%) contrast(89%);
+
+  vertical-align: middle;
+  margin-left: 5px;
+}
+
+@media (max-width: 768px) {
+  .details ul {
+    font-size: 1.2rem;
+    padding-left: 1.5rem;
+  }
+}
+
 /* .about-section {
   min-height: 65vh;
   background-color: #1e1b29;
